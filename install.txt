@@ -1,0 +1,83 @@
+1- Extract you epoch.Altis.pbo and paste forlder spawnsystem in root epoch.Altis
+
+2- Open you mission.sqm and add this markers in you class markers:
+
+class Item3 {
+			position[] = {20425.24,51.105797,9290.9766};
+			name = "panagia";
+			type = "Empty";
+		};
+		
+		class Item4 {
+			position[] = {14305.433,26.680498,19619.625};
+			name = "athira";
+			type = "Empty";
+		};
+		
+		class Item5 {
+			position[] = {5515.2236,144.10188,12835.379};
+			name = "kavala";
+			type = "Empty";
+		};
+		
+		class Item6 {
+			position[] = {10349.648,84.088295,18654.902};
+			name = "galati";
+			type = "Empty";
+		};
+		
+		class Item7 {
+			position[] = {22573.434,12.585615,18836.17};
+			name = "paros";
+			type = "Empty";
+		};
+		class Item8
+        {
+            position[]={18465.975,24.193941,14288.073};
+            name="seast";
+            type="Empty";
+        };
+		class Item9
+        {
+            position[]={13337.743,2.2215016,14517.778};
+            name="scenter";
+            type="Empty";
+        };
+		class Item10
+        {
+            position[]={6252.9629,96.939079,16864.871};
+            name="swest";
+            type="Empty";
+        };
+		
+!!!IMPORTANT!!! CHECK NUMBERS OF ITEMS 
+
+3- Add this class in you mission.sqm
+
+class Vehicles
+	{
+		items=1;
+		class Item0
+		{
+			position[]={23600.76,3.1900001,17992.961};//Spawn camera EPOCH 0303 Altis
+			azimut=180;
+			offsetY=0.2;
+			id=1;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this allowDamage false; this addAction[""Parachute Spawn"",""spawnsystem\initspawn.sqf""]";
+		};
+	};
+	
+	This is a panel to call function Parachute Spawn
+	
+4- Battleye filters, add in you scripts.txt this filters
+
+7 exec !="[] execVM "spawnsystem\spawn.sqf";" !="execVM "spawnsystem\initspawn.sqf";"
+
+7 createDialog !"createdialog "spawn_dialog";
+
+7 displayAddEventHandler !"(findDisplay 666) displayAddEventHandler [\"KeyDown\",\"true\"];"
+
+5- restart you server and jump :)
