@@ -14,83 +14,85 @@ loadoutCIV = {
 	player addMagazine "5Rnd_rollins_mag";
 	player addItem "ItemSodaMocha";
 	player addItem "ItemSodaMocha";
-	player addItem "Heal_EPOCH";
+	player addItem "FAK";
 };
 
+pathira = [14305.433,19619.625];
+ppanagia = [20425.24,9290.9766];
+pparsof = [22573.434,18836.17];
+pkavala = [5515.2236,12835.379];
+pgalati = [10349.648,18654.902];
+pcenter = [13337.743,14517.778];
+pwest = [6252.9629,16864.871];
+peast = [18465.975,14288.073];
+
+
 ATHIRA = {
-	_pos = getMarkerPos "athira";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos pathira,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 PANAGIA = {
-	_pos = getMarkerPos "panagia";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos ppanagia,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 PAROSSOFIA = {
-	_pos = getMarkerPos "paros";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos pparsof,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 KAVALA = {
-	_pos = getMarkerPos "kavala";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos pkavala,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 GALATI = {
-	_pos = getMarkerPos "galati";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos pgalati,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 TRA_CENTER = {
-	_pos = getMarkerPos "scenter";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos pcenter,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 TRA_WEST = {
-	_pos = getMarkerPos "swest";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos pwest,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 TRA_EAST = {
-	_pos = getMarkerPos "seast";
 	_dir = random 359;
 	call loadoutCIV;
-	player SetPos _pos,player SetDir _dir;
+	player SetPos peast,player SetDir _dir;
 	player setPos (player modelToWorld [0,0,1500]);
 	cutText ["","BLACK IN"];
 	(findDisplay 666) displayRemoveEventHandler ["KeyDown", noesckey];
