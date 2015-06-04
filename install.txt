@@ -19,8 +19,10 @@ class Vehicles
 	};
 	
 	This is a panel to call function Parachute Spawn
+
+3-In you description.ext add this line: #include "spawnsystem\dialog.hpp"
 	
-3- Battleye filters, add in you scripts.txt this filters
+4- Battleye filters, add in you scripts.txt this filters
 
 7 exec !="[] execVM "spawnsystem\spawn.sqf";" !="execVM "spawnsystem\initspawn.sqf";"
 
